@@ -8,12 +8,23 @@ export const Content = () => {
     const handleClick = () => {
       console.log('you clicked it!')
     }
+    
+    const handleClick2 = (name) => {
+      console.log(`${name} was clicked`)
+    }
+
+    const handleClick3 = (e) => {
+      console.log(e.target.innerText)
+    }
+
   return (
     <main>
-      <p>
+      <p onDoubleClick={handleClick}>
         Hello {handleNameChange()}!
       </p>
       <button onClick={handleClick}>Click it</button>
+      <button onClick={() => handleClick2('Matt')}>Click it</button>
+      <button onClick={(e) => handleClick3(e)}>Click it</button>
     </main>
   )
 }
