@@ -1,6 +1,6 @@
 import Header from './Header';
-import SearchItem from './SearchItem';
 import AddItem from './AddItem';
+import SearchItem from './SearchItem';
 import Content from './Content'
 import Footer from './Footer';
 import { useState } from 'react';
@@ -44,17 +44,17 @@ function App() {
   return (
     <div className="App">
       <Header title="Groceries List" />
-      <SearchItem
-        search={search}
-        setSearch={setSearch}
-      />
       <AddItem 
         newItem={newItem}
         setNewItem={setNewItem}
         handleSubmit={handleSubmit}
       />
+      <SearchItem
+        search={search}
+        setSearch={setSearch}
+      />
       <Content 
-        items={items}
+        items={items.filter(item => ((item.item).toLowerCase()).includes(search.toLowerCase()))}
         handleCheck={handleCheck}
         handleDelete={handleDelete}
       />
