@@ -1,7 +1,7 @@
 {
   "name": "grocery_list",
   "version": "0.1.0",
-  "homepage": "https://matthewjflanagan.github.io/grocery_list/index",
+  "homepage": "https://matthewjflanagan.github.io/grocery_list/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
